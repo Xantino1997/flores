@@ -825,7 +825,7 @@ export default function App() {
                     )}
                     <button
                       onClick={() => setSelectedPub(pubIndex)}
-                      className={`w-full text-left p-3 rounded-lg mb-2 transition ${
+                      className={`w-full text-left p-2 md:p-3 rounded-lg mb-2 transition text-sm md:text-base ${
                         selectedPub === pubIndex 
                           ? 'bg-blue-600 text-white shadow-md' 
                           : 'bg-gray-100 hover:bg-gray-200'
@@ -853,19 +853,19 @@ export default function App() {
             </div>
 
             {/* DETALLES DEL PUBLICADOR */}
-            <div className="col-span-2 bg-white rounded-xl shadow-lg p-6 max-h-[calc(100vh-250px)] overflow-y-auto">
+            <div className="lg:col-span-2 bg-white rounded-xl shadow-lg p-4 md:p-6 max-h-[calc(100vh-250px)] overflow-y-auto">
               {pub && (
                 <>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-3">
-                      <h2 className="text-2xl font-bold text-gray-800">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 md:mb-6 gap-3">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 md:gap-3 w-full sm:w-auto">
+                      <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                         {pub.fname} {pub.lname}
                       </h2>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 flex-wrap">
                         {obtenerEtiquetas(pub).map((etiq, idx) => (
                           <span
                             key={idx}
-                            className={`text-sm px-3 py-1 rounded-full text-white ${etiq.color}`}
+                            className={`text-xs md:text-sm px-2 md:px-3 py-1 rounded-full text-white ${etiq.color}`}
                           >
                             {etiq.texto}
                           </span>
@@ -874,16 +874,16 @@ export default function App() {
                     </div>
                     <button
                       onClick={eliminarPublicador}
-                      className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition shadow-md font-semibold"
+                      className="w-full sm:w-auto px-3 md:px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition shadow-md font-semibold text-sm md:text-base"
                     >
                       🗑️ Eliminar
                     </button>
                   </div>
 
                   {/* INFORMACIÓN PERSONAL */}
-                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-5 mb-6">
-                    <h3 className="text-lg font-semibold text-gray-700 mb-4">📝 Información Personal</h3>
-                    <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-3 md:p-5 mb-4 md:mb-6">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-700 mb-3 md:mb-4">📝 Información Personal</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                       {[
                         { label: 'ID', field: 'id', type: 'text' },
                         { label: 'Nombre', field: 'fname', type: 'text' },
@@ -927,12 +927,12 @@ export default function App() {
                     </div>
                     
                     {/* PRIVILEGIOS Y ROL */}
-                    <div className="mt-4 pt-4 border-t border-gray-300">
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">👔 Privilegios y Rol en el Grupo</h4>
+                    <div className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-300">
+                      <h4 className="text-sm md:text-base font-semibold text-gray-700 mb-2 md:mb-3">👔 Privilegios y Rol en el Grupo</h4>
                       
                       {/* Rol en Grupo */}
                       <div className="mb-3">
-                        <label className="block text-sm font-medium text-gray-600 mb-2">
+                        <label className="block text-xs md:text-sm font-medium text-gray-600 mb-1 md:mb-2">
                           Rol en Grupo
                         </label>
                         <input
@@ -940,12 +940,12 @@ export default function App() {
                           value={pub.groupname}
                           onChange={e => editarCampo('groupname', e.target.value)}
                           placeholder="Ej: Super de grupo, Auxiliar de grupo"
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                          className="w-full px-2 md:px-3 py-2 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         />
                       </div>
                       
                       {/* Checkboxes de Privilegios */}
-                      <div className="flex gap-6 flex-wrap mb-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-3 md:mb-4">
                         <label className="flex items-center gap-2 cursor-pointer">
                           <input
                             type="checkbox"
@@ -961,7 +961,7 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-amber-600 rounded focus:ring-2 focus:ring-amber-500"
                           />
-                          <span className="text-sm font-medium">
+                          <span className="text-xs md:text-sm font-medium">
                             <span className="px-2 py-1 bg-amber-600 text-white rounded text-xs">Super de Grupo</span>
                           </span>
                         </label>
@@ -981,7 +981,7 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-orange-600 rounded focus:ring-2 focus:ring-orange-500"
                           />
-                          <span className="text-sm font-medium">
+                          <span className="text-xs md:text-sm font-medium">
                             <span className="px-2 py-1 bg-orange-500 text-white rounded text-xs">Auxiliar de Grupo</span>
                           </span>
                         </label>
@@ -1001,7 +1001,7 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-red-600 rounded focus:ring-2 focus:ring-red-500"
                           />
-                          <span className="text-sm font-medium">
+                          <span className="text-xs md:text-sm font-medium">
                             <span className="px-2 py-1 bg-red-500 text-white rounded text-xs">Anciano</span>
                           </span>
                         </label>
@@ -1021,7 +1021,7 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-sky-600 rounded focus:ring-2 focus:ring-sky-500"
                           />
-                          <span className="text-sm font-medium">
+                          <span className="text-xs md:text-sm font-medium">
                             <span className="px-2 py-1 bg-sky-500 text-white rounded text-xs">Siervo Ministerial</span>
                           </span>
                         </label>
@@ -1039,18 +1039,18 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-green-600 rounded focus:ring-2 focus:ring-green-500"
                           />
-                          <span className="text-sm font-medium">
+                          <span className="text-xs md:text-sm font-medium">
                             <span className="px-2 py-1 bg-green-500 text-white rounded text-xs">Precursor Regular</span>
                           </span>
                         </label>
                       </div>
                       
                       {/* Estado - Checkboxes */}
-                      <div className="pt-3 border-t border-gray-200">
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      <div className="pt-2 md:pt-3 border-t border-gray-200">
+                        <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-2">
                           🔄 Estado del Publicador
                         </label>
-                        <div className="flex gap-6 flex-wrap">
+                        <div className="grid grid-cols-2 gap-2 md:gap-3">
                           <label className="flex items-center gap-2 cursor-pointer">
                             <input
                               type="checkbox"
@@ -1064,7 +1064,7 @@ export default function App() {
                               }}
                               className="w-4 h-4 text-gray-600 rounded focus:ring-2 focus:ring-gray-500"
                             />
-                            <span className="text-sm font-medium">
+                            <span className="text-xs md:text-sm font-medium">
                               <span className="px-2 py-1 bg-gray-500 text-white rounded text-xs">Inactivo</span>
                             </span>
                           </label>
@@ -1082,7 +1082,7 @@ export default function App() {
                               }}
                               className="w-4 h-4 text-gray-800 rounded focus:ring-2 focus:ring-gray-700"
                             />
-                            <span className="text-sm font-medium">
+                            <span className="text-xs md:text-sm font-medium">
                               <span className="px-2 py-1 bg-gray-700 text-white rounded text-xs">Expulsado</span>
                             </span>
                           </label>
@@ -1092,22 +1092,22 @@ export default function App() {
                         </p>
                       </div>
                       
-                      <p className="text-xs text-gray-500 mt-3">
+                      <p className="text-xs text-gray-500 mt-2 md:mt-3">
                         💡 Puedes marcar múltiples privilegios. Ejemplo: Anciano + Super de Grupo + Precursor Regular
                       </p>
                     </div>
                   </div>
 
                   {/* REGISTROS MENSUALES */}
-                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-5">
-                    <h3 className="text-lg font-semibold text-gray-700 mb-4">📊 Registros Mensuales</h3>
-                    <div className="space-y-3">
+                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-3 md:p-5">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-700 mb-3 md:mb-4">📊 Registros Mensuales</h3>
+                    <div className="space-y-2 md:space-y-3">
                       {pub.months.map((mes, i) => (
-                        <div key={i} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                          <div className="font-semibold text-gray-700 mb-3">
+                        <div key={i} className="bg-white rounded-lg p-3 md:p-4 shadow-sm border border-gray-200">
+                          <div className="font-semibold text-sm md:text-base text-gray-700 mb-2 md:mb-3">
                             {traducirMes(mes.month)} {mes.year}
                           </div>
-                          <div className="grid grid-cols-4 gap-3">
+                          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 md:gap-3">
                             {[
                               { label: 'Publicaciones', field: 'plcmts' },
                               { label: 'Videos', field: 'videos' },
