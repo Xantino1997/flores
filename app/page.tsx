@@ -1409,7 +1409,7 @@ export default function App() {
                           <div className="font-semibold text-sm sm:text-base text-gray-700 mb-2 sm:mb-3">
                             {traducirMes(mes.month)} {mes.year}
                           </div>
-                          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+                          <div className="grid grid-cols-2 sm:grid-cols-3 text-gray-900 gap-2 sm:gap-3">
                             {[
                               { label: "Publicaciones", field: "plcmts" },
                               { label: "Videos", field: "videos" },
@@ -1432,7 +1432,7 @@ export default function App() {
                                       e.target.value
                                     )
                                   }
-                                  className="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:ring-2 focus:ring-green-500 focus:outline-none"
+                                  className="w-full px-2 py-1 text-sm text-gray-900 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 focus:outline-none"
                                 />
                               </div>
                             ))}
