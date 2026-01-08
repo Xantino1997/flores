@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Editor de Grupos | Las Flores",
-  description: "Aplicación profesional para la gestión y edición de grupos de publicadores de la congregación Las Flores. Administra información, privilegios y registros mensuales de manera eficiente.",
+  description: "Aplicación para la gestión y edición de grupos de publicadores de la congregación Las Flores. Administra información, privilegios y registros mensuales de manera eficiente.",
   keywords: ["editor de grupos", "publicadores", "congregación", "Las Flores", "gestión", "XML"],
   authors: [{ name: "Las Flores" }],
   creator: "Las Flores",
@@ -23,12 +23,13 @@ export const metadata: Metadata = {
   // Open Graph (Facebook, LinkedIn, Discord)
   openGraph: {
     title: "Editor de Grupos | Las Flores",
-    description: "Gestión profesional de grupos de publicadores",
+    description: "Gestión de grupos de publicadores",
     url: "https://flores-olive.vercel.app",
     siteName: "Editor de Grupos Las Flores",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop", // Cambia por tu imagen
+        //url: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop", 
+        url: "https://cdn-icons-png.freepik.com/512/15196/15196764.png", 
         width: 1200,
         height: 630,
         alt: "Editor de Grupos Las Flores",
