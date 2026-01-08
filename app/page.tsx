@@ -1076,7 +1076,7 @@ export default function App() {
                         },
                       ].map(({ label, field, type, cambioGrupo }) => (
                         <div key={field}>
-                          <label className="block text-sm font-medium text-gray-600 mb-1">
+                          <label className="block text-sm font-bold text-gray-900 mb-1">
                             {label}
                             {cambioGrupo && (
                               <span className="text-xs text-orange-600 ml-1">
@@ -1124,7 +1124,7 @@ export default function App() {
                       </h4>
 
                       <div className="mb-3">
-                        <label className="block text-xs sm:text-sm font-medium text-gray-600 mb-1 sm:mb-2">
+                        <label className="block text-xs sm:text-sm font-bold text-gray-900 mb-1 sm:mb-2">
                           Rol en Grupo
                         </label>
                         <input
@@ -1419,7 +1419,7 @@ export default function App() {
                               { label: "Pionero", field: "pio" },
                             ].map(({ label, field }) => (
                               <div key={field}>
-                                <label className="block text-xs font-medium text-gray-600 mb-1">
+                                <label className="block text-xs font-bold text-gray-900 mb-1">
                                   {label}
                                 </label>
                                 <input
