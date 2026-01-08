@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Editor de Grupos | Las Flores",
     description: "Gestión profesional de grupos de publicadores",
-    url: "https://tu-dominio.com", // Cambia esto por tu URL
+    url: "https://flores-olive.vercel.app",
     siteName: "Editor de Grupos Las Flores",
     images: [
       {
