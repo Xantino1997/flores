@@ -867,14 +867,18 @@ export default function App() {
                         );
                         setSelectedPub(primerPubDelGrupo);
                       }}
-                      className={`w-full text-left p-2 sm:p-3 rounded-lg transition font-semibold text-sm sm:text-base ${
+                      className={`w-full text-left p-2 sm:p-3 rounded-lg transition text-sm sm:text-base ${
                         selectedGroup === grupo
-                          ? "bg-indigo-600 text-white shadow-md"
-                          : "bg-gray-100 hover:bg-gray-200"
+                          ? "bg-indigo-600 text-white shadow-md font-bold"
+                          : "bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold"
                       }`}
                     >
                       Grupo {grupo}
-                      <div className="text-xs opacity-75 font-normal">
+                      <div
+                        className={`text-xs font-normal ${
+                          selectedGroup === grupo ? "opacity-90" : "opacity-75"
+                        }`}
+                      >
                         {cantidadActivos} publicadores
                       </div>
                     </button>
@@ -896,14 +900,20 @@ export default function App() {
                     });
                     setSelectedPub(primerInactivo >= 0 ? primerInactivo : null);
                   }}
-                  className={`w-full text-left p-2 sm:p-3 rounded-lg transition font-semibold text-sm sm:text-base ${
+                  className={`w-full text-left p-2 sm:p-3 rounded-lg transition text-sm sm:text-base ${
                     selectedGroup === "inactivos"
-                      ? "bg-gray-600 text-white shadow-md"
-                      : "bg-gray-100 hover:bg-gray-200"
+                      ? "bg-gray-600 text-white shadow-md font-bold"
+                      : "bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold"
                   }`}
                 >
                   🚫 Inactivos
-                  <div className="text-xs opacity-75 font-normal">
+                  <div
+                    className={`text-xs font-normal ${
+                      selectedGroup === "inactivos"
+                        ? "opacity-90"
+                        : "opacity-75"
+                    }`}
+                  >
                     {
                       pubs.filter((p) => {
                         const status = (p.status || "activo").toLowerCase();
@@ -975,23 +985,27 @@ export default function App() {
                       className={`w-full text-left p-2 sm:p-3 rounded-lg mb-2 transition text-sm ${
                         selectedPub === pubIndex
                           ? "bg-blue-600 text-white shadow-md"
-                          : "bg-gray-100 hover:bg-gray-200"
+                          : "bg-gray-100 hover:bg-gray-200 text-gray-900"
                       }`}
                     >
-                      <div className="font-semibold">
+                      <div className="font-bold">
                         {p.fname} {p.lname}
                       </div>
                       <div className="flex gap-1 mt-1 flex-wrap">
                         {etiquetas.map((etiq, idx) => (
                           <span
                             key={idx}
-                            className={`text-xs px-2 py-0.5 rounded text-white ${etiq.color}`}
+                            className={`text-xs px-2 py-0.5 rounded text-white font-semibold ${etiq.color}`}
                           >
                             {etiq.texto}
                           </span>
                         ))}
                       </div>
-                      <div className="text-xs opacity-75 mt-1">
+                      <div
+                        className={`text-xs mt-1 font-medium ${
+                          selectedPub === pubIndex ? "opacity-90" : "opacity-75"
+                        }`}
+                      >
                         ID: {p.id} • {generoES}
                         {selectedGroup === "inactivos" && ` • Grupo ${p.group}`}
                       </div>
