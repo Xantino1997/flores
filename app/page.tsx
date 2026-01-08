@@ -1045,7 +1045,7 @@ export default function App() {
 
                   {/* INFORMACIÓN PERSONAL */}
                   <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-3 sm:p-5 mb-4 sm:mb-6">
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-3 sm:mb-4">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4">
                       📝 Información Personal
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -1119,7 +1119,7 @@ export default function App() {
 
                     {/* PRIVILEGIOS Y ROL */}
                     <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-300">
-                      <h4 className="text-sm sm:text-base font-semibold text-gray-700 mb-2 sm:mb-3">
+                      <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-2 sm:mb-3">
                         👔 Privilegios y Rol en el Grupo
                       </h4>
 
@@ -1168,7 +1168,7 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-amber-600 rounded focus:ring-2 focus:ring-amber-500"
                           />
-                          <span className="text-xs sm:text-sm font-medium">
+                          <span className="text-xs sm:text-sm font-bold text-gray-900">
                             <span className="px-2 py-1 bg-amber-600 text-white rounded text-xs">
                               Super de Grupo
                             </span>
@@ -1212,7 +1212,7 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-orange-600 rounded focus:ring-2 focus:ring-orange-500"
                           />
-                          <span className="text-xs sm:text-sm font-medium">
+                          <span className="text-xs sm:text-sm font-bold text-gray-900">
                             <span className="px-2 py-1 bg-orange-500 text-white rounded text-xs">
                               Auxiliar de Grupo
                             </span>
@@ -1251,7 +1251,7 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-red-600 rounded focus:ring-2 focus:ring-red-500"
                           />
-                          <span className="text-xs sm:text-sm font-medium">
+                          <span className="text-xs sm:text-sm font-bold text-gray-900">
                             <span className="px-2 py-1 bg-red-500 text-white rounded text-xs">
                               Anciano
                             </span>
@@ -1295,7 +1295,7 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-sky-600 rounded focus:ring-2 focus:ring-sky-500"
                           />
-                          <span className="text-xs sm:text-sm font-medium">
+                          <span className="text-xs sm:text-sm font-bold text-gray-900">
                             <span className="px-2 py-1 bg-sky-500 text-white rounded text-xs">
                               Siervo Ministerial
                             </span>
@@ -1320,7 +1320,7 @@ export default function App() {
                             }}
                             className="w-4 h-4 text-green-600 rounded focus:ring-2 focus:ring-green-500"
                           />
-                          <span className="text-xs sm:text-sm font-medium">
+                          <span className="text-xs sm:text-sm font-bold text-gray-900">
                             <span className="px-2 py-1 bg-green-500 text-white rounded text-xs">
                               Precursor Regular
                             </span>
@@ -1329,7 +1329,7 @@ export default function App() {
                       </div>
 
                       <div className="pt-2 sm:pt-3 border-t border-gray-200">
-                        <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
+                        <label className="block text-xs sm:text-sm font-bold text-gray-900 mb-2">
                           🔄 Estado del Publicador
                         </label>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
@@ -1348,7 +1348,7 @@ export default function App() {
                               }}
                               className="w-4 h-4 text-gray-600 rounded focus:ring-2 focus:ring-gray-500"
                             />
-                            <span className="text-xs sm:text-sm font-medium">
+                            <span className="text-xs sm:text-sm font-bold text-gray-900">
                               <span className="px-2 py-1 bg-gray-500 text-white rounded text-xs">
                                 Inactivo
                               </span>
@@ -1375,7 +1375,7 @@ export default function App() {
                               }}
                               className="w-4 h-4 text-gray-800 rounded focus:ring-2 focus:ring-gray-700"
                             />
-                            <span className="text-xs sm:text-sm font-medium">
+                            <span className="text-xs sm:text-sm font-bold text-gray-900">
                               <span className="px-2 py-1 bg-gray-700 text-white rounded text-xs">
                                 Sacado
                               </span>
@@ -1388,7 +1388,7 @@ export default function App() {
                         </p>
                       </div>
 
-                      <p className="text-xs text-gray-500 mt-2 sm:mt-3">
+                      <p className="text-xs text-gray-900 font-bold mt-2 sm:mt-3">
                         💡 Puedes marcar múltiples privilegios. Ejemplo: Anciano
                         + Super de Grupo + Precursor Regular
                       </p>
@@ -1397,7 +1397,7 @@ export default function App() {
 
                   {/* REGISTROS MENSUALES */}
                   <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-3 sm:p-5">
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-3 sm:mb-4">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4">
                       📊 Registros Mensuales
                     </h3>
                     <div className="space-y-2 sm:space-y-3">
