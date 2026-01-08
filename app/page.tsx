@@ -1106,7 +1106,7 @@ export default function App() {
                                   e.target.value
                                 )
                               }
-                              className={`w-full px-3 py-2 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:outline-none ${
+                              className={`w-full px-3 py-2 text-sm sm:text-base text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:outline-none ${
                                 cambioGrupo
                                   ? "focus:ring-orange-500 border-orange-300"
                                   : "focus:ring-blue-500"
@@ -1134,7 +1134,7 @@ export default function App() {
                             editarCampo("groupname", e.target.value)
                           }
                           placeholder="Ej: Super de grupo, Auxiliar de grupo"
-                          className="w-full px-2 sm:px-3 py-2 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                          className="w-full px-2 sm:px-3 py-2 text-sm sm:text-base text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         />
                       </div>
 
